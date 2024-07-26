@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>단어 슬롯머신</title>
+    <title>랜덤 책 제목 뽑기</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="result" class="result"></div>
-    <div id="slotStage" class="slot-stage">누가</div>
-    <div class="slot-machine">
-        <div class="slot" id="slot">슬롯머신</div>
+    <div id="inputPage" class="page">
+        <h1>랜덤 책 제목 뽑기</h1>
+        <div id="inputSections">
+            <!-- 6개의 섹션이 여기에 동적으로 생성됩니다 -->
+        </div>
+        <button id="completeButton">완료</button>
     </div>
-    <div class="input-section">
-        <input type="text" id="wordInput" placeholder="단어를 입력하세요">
-        <button id="addWordButton">단어 추가하기</button>
+
+    <div id="slotMachinePage" class="page" style="display: none;">
+        <h1>랜덤 책 제목 뽑기</h1>
+        <div id="slotMachines">
+            <!-- 6개의 슬롯머신이 여기에 동적으로 생성됩니다 -->
+        </div>
+        <button id="drawButton">뽑기 시작</button>
+        <button id="stopButton" style="display: none;">정지</button>
+        <div id="result"></div>
+        <button id="restartButton" style="display: none;">다시 시작하기</button>
     </div>
-    <ul id="wordList"></ul>
-    <button id="controlButton" disabled>Start</button>
-    <button id="retryButton" style="display:none;">다시하기</button>
-    
-    
 
     <script src="script.js"></script>
 </body>
